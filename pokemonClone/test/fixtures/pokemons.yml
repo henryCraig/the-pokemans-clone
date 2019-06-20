@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  hpmin: 1
+  hpmax: 1
+  defmin: 1
+  defmax: 1
+  spcmin: 1
+  spcmax: 1
+  name: MyString
+
+two:
+  type: 
+  hpmin: 1
+  hpmax: 1
+  defmin: 1
+  defmax: 1
+  spcmin: 1
+  spcmax: 1
+  name: MyString
