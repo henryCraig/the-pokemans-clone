@@ -5,7 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'poke-api-v2'
 
-
-pokemon = Pokemon.create([{ name: 'Bulbasaur', poketype: 'Grass'}, { name: 'Charmander', poketype: 'Fire'}])
-trainer = Trainer.create([{ name: 'Ash Ketchem'}])
+(1..151).each do |n|
+    poke = PokeApi.get(pokemon: n)
+    pokemon = Pokemon.create({ name: poke.name, poketype: poke.types[0].type.name})
+    puts "Added: " + poke.name
+    # puts poke.name
+    # puts poke.id
+    # puts poke.types[0].type.name
+    # puts n
+end
